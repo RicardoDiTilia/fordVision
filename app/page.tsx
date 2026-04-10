@@ -161,6 +161,22 @@ export default function LoginPage() {
 
   return (
     <main className="scanline grain relative min-h-screen w-full overflow-hidden bg-black flex flex-col items-center justify-center px-4">
+      {/* E — Video background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-25"
+        poster=""
+      >
+        <source
+          src="https://cdn.pixabay.com/video/2020/07/30/45469-445072030_large.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div className="absolute inset-0 bg-black/70" />
+
       <AnimatePresence mode="wait">
         {booting && <BootSequence onComplete={handleBootComplete} />}
       </AnimatePresence>

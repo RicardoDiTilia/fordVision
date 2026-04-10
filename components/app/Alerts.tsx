@@ -63,7 +63,7 @@ export default function Alerts() {
                   <span>{a.dealership}</span>
                 </div>
               </div>
-              <button className="w-full py-2 bg-ford-blue/20 hover:bg-ford-blue-light border border-ford-blue-light text-ford-blue-light hover:text-white text-[10px] uppercase tracking-[0.2em] font-bold transition-all flex items-center justify-center gap-1">
+              <button className="cta-rimac w-full justify-center text-[9px] py-2">
                 Agendar agora
                 <ChevronRight className="w-3 h-3" />
               </button>

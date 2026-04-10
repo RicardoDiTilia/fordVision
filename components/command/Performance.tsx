@@ -125,7 +125,7 @@ export default function Performance() {
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="text-xs font-mono font-bold text-ford-blue-light">
+                    <div className="num-display text-xs text-ford-blue-light">
                       {d.vinShare}%
                     </div>
                     <Icon className={`w-3 h-3 ml-auto ${color}`} />
@@ -180,7 +180,7 @@ function Badge({
         {title}
       </div>
       <div className="text-sm font-bold mt-1">{dealer}</div>
-      <div className="text-xl font-black text-ford-blue-light mt-1">{value}</div>
+      <div className="num-display text-xl text-ford-blue-light mt-1">{value}</div>
     </div>
   );
 }

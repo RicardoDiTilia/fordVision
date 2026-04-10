@@ -107,7 +107,7 @@ export default function LeadsRadar() {
               <div className="mb-2">
                 <div className="flex items-center justify-between text-[10px] uppercase tracking-wider text-white/50 mb-1">
                   <span>Probabilidade ML</span>
-                  <span className="text-ford-blue-light font-bold">
+                  <span className="num-display text-ford-blue-light">
                     {l.probability}%
                   </span>
                 </div>
@@ -187,7 +187,7 @@ export default function LeadsRadar() {
               </button>
               <button
                 onClick={() => setOpenLead(null)}
-                className="px-4 py-2.5 border border-ford-gray-mid hover:border-white/40 text-xs uppercase tracking-[0.2em]"
+                className="cta-rimac text-[9px] px-4"
               >
                 Fechar
               </button>

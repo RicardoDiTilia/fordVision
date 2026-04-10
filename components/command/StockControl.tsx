@@ -105,10 +105,10 @@ export default function StockControl() {
                     </div>
                   </td>
                   <td className="p-3 text-xs text-white/70">{r.dealership}</td>
-                  <td className="p-3 text-right font-mono text-xs">
+                  <td className="p-3 text-right num-display text-xs">
                     {r.forecast}
                   </td>
-                  <td className="p-3 text-right font-mono text-xs">
+                  <td className="p-3 text-right num-display text-xs">
                     {r.available}
                   </td>
                   <td className="p-3">

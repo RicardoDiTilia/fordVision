@@ -3,8 +3,10 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Car, Bell, Award, Clock, Sparkles, Home } from "lucide-react";
+import { Car, Bell, Award, Clock, Sparkles } from "lucide-react";
 import Navbar from "@/components/shared/Navbar";
+import GradientCanvas from "@/components/shared/GradientCanvas";
+import ScrollIndicator from "@/components/shared/ScrollIndicator";
 import PhoneShell from "@/components/app/PhoneShell";
 import Onboarding from "@/components/app/Onboarding";
 import MyFord from "@/components/app/MyFord";
@@ -24,6 +26,13 @@ const TABS: { id: Tab; label: string; icon: any }[] = [
   { id: "moments", label: "Momentos", icon: Sparkles },
 ];
 
+/* H — staggered enter/exit for tab content */
+const tabVariants = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" } },
+  exit: { opacity: 0, y: -10, transition: { duration: 0.15 } },
+};
+
 export default function ClientAppPage() {
   const router = useRouter();
   const [tab, setTab] = useState<Tab>("onboarding");
@@ -39,18 +48,20 @@ export default function ClientAppPage() {
 
   return (
     <div className="grain min-h-screen bg-black flex flex-col relative">
+      {/* A — Animated gradient canvas */}
+      <GradientCanvas />
       <div className="fixed inset-0 hud-grid opacity-50 pointer-events-none" />
       <Navbar />
-      <main className="flex-1 flex items-center justify-center py-8 px-4 relative">
+      <main className="flex-1 flex items-center justify-center py-8 px-4 relative z-10">
         <div className="flex flex-col items-center gap-4">
           <PhoneShell>
             <AnimatePresence mode="wait">
               <motion.div
                 key={tab}
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -8 }}
-                transition={{ duration: 0.2 }}
+                variants={tabVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
               >
                 {tab === "onboarding" && (
                   <Onboarding onFinish={() => setTab("myford")} />
@@ -92,13 +103,15 @@ export default function ClientAppPage() {
           {tab === "onboarding" && (
             <button
               onClick={() => setTab("myford")}
-              className="text-[10px] uppercase tracking-[0.2em] text-white/40 hover:text-ford-blue-light"
+              className="cta-rimac text-[9px]"
             >
-              Pular onboarding →
+              Pular onboarding
             </button>
           )}
         </div>
       </main>
+      {/* G — Scroll indicator */}
+      <ScrollIndicator />
     </div>
   );
 }

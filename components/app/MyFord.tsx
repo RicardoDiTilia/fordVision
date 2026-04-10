@@ -110,7 +110,7 @@ export default function MyFord() {
           className="flex items-center justify-between mb-4"
         >
           <span className="font-mono-tech text-[9px] text-white/30 uppercase tracking-[0.2em]">Saúde do veículo</span>
-          <span className={`font-mono-tech text-xl font-bold ${overall >= 70 ? "text-green-400" : overall >= 50 ? "text-yellow-400" : "text-ford-red"}`}>
+          <span className={`num-display text-xl ${overall >= 70 ? "text-green-400" : overall >= 50 ? "text-yellow-400" : "text-ford-red"}`}>
             {overall}%
           </span>
         </motion.div>
@@ -127,6 +127,9 @@ export default function MyFord() {
                 transition={{ delay: 1 + i * 0.1 }}
                 className="flex items-center gap-3"
               >
+                <span className="font-mono-tech text-[8px] text-ford-blue-light/50 w-4 shrink-0">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
                 <Icon className={`w-3.5 h-3.5 ${STATUS_COLOR[s.status]} shrink-0`} strokeWidth={2} />
                 <span className="font-mono-tech text-[9px] text-white/45 w-14 shrink-0 uppercase tracking-wider">
                   {s.name.split(" ").pop()}
@@ -142,7 +145,7 @@ export default function MyFord() {
                 </div>
                 <div className="flex items-center gap-2 shrink-0">
                   <span className="font-mono-tech text-[8px] text-white/30">{s.detail}</span>
-                  <span className={`font-mono-tech text-[11px] font-bold w-9 text-right ${STATUS_COLOR[s.status]}`}>
+                  <span className={`num-display text-[11px] w-9 text-right ${STATUS_COLOR[s.status]}`}>
                     {s.health}%
                   </span>
                 </div>

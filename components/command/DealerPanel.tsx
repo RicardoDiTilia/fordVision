@@ -161,7 +161,7 @@ function Kpi({
         {icon}
         {label}
       </div>
-      <div className="font-display text-2xl font-bold mt-1 tabular-nums">{value}</div>
+      <div className="num-display text-2xl mt-1">{value}</div>
     </div>
   );
 }
