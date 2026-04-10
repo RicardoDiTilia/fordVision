@@ -43,7 +43,7 @@ export default function MotorPage() {
           </div>
           <h1 className="font-display text-5xl md:text-6xl font-bold tracking-[0.04em] mt-3 uppercase">
             Motor de IA <br />
-            <span className="text-ford-blue-light">Ford Pulse</span>
+            <span className="text-ford-blue-light">Ford Vision</span>
           </h1>
           <p className="text-sm text-white/60 mt-3 max-w-2xl mx-auto">
             Como dados de telemetria viram retenção: o pipeline preditivo que
@@ -116,7 +116,7 @@ export default function MotorPage() {
             top="33%"
             left="50%"
             icon={<Brain className="w-6 h-6" />}
-            title="Ford Pulse AI"
+            title="Ford Vision AI"
             subtitle="Modelo de ML · Segmentação + Predição"
             tags={[
               "Classifica cliente",
@@ -188,7 +188,7 @@ export default function MotorPage() {
           className="mt-16 max-w-3xl mx-auto text-center border-l-4 border-ford-blue-light pl-6 py-3"
         >
           <p className="text-base md:text-lg italic text-white/85 leading-relaxed">
-            "O Ford Pulse não espera o cliente lembrar da revisão. Ele sabe
+            "O Ford Vision não espera o cliente lembrar da revisão. Ele sabe
             antes do cliente que o carro precisa de atenção, confirma que a
             peça está disponível, e entrega o lead pronto na mão da equipe de
             contato."

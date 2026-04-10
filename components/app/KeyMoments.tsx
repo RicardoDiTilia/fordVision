@@ -20,7 +20,7 @@ export default function KeyMoments() {
           Momentos<span className="text-ford-blue-light">·</span>chave
         </h1>
         <p className="text-[11px] text-white/50 mt-1">
-          O Pulse age sozinho nos momentos certos
+          O Vision age sozinho nos momentos certos
         </p>
       </div>
       <div className="space-y-2">

@@ -19,11 +19,11 @@ export default function Onboarding({ onFinish }: Props) {
           <MessageCircle className="w-4 h-4 text-green-400 mt-0.5" />
           <div className="flex-1">
             <div className="text-[10px] uppercase tracking-wider text-green-400">
-              WhatsApp · Ford Pulse
+              WhatsApp · Ford Vision
             </div>
             <p className="text-xs text-white/90 mt-1 leading-relaxed">
               Olá Rafael! Sua Ford Ranger já está pronta. Toque aqui pra ativar
-              seu Ford Pulse e fazer o tour digital do seu carro.
+              seu Ford Vision e fazer o tour digital do seu carro.
             </p>
             <div className="text-[9px] text-white/40 mt-1">há 48h</div>
           </div>
@@ -41,7 +41,7 @@ export default function Onboarding({ onFinish }: Props) {
         </div>
         <p className="text-xs text-white/60 leading-relaxed mb-4">
           Vamos te apresentar todos os recursos do seu novo Ford Ranger 2024
-          Limited e conectar seu veículo ao Pulse.
+          Limited e conectar seu veículo ao Vision.
         </p>
 
         <div className="space-y-2">

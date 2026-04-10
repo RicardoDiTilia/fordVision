@@ -138,7 +138,7 @@ export default function StockControl() {
           <AlertTriangle className="w-5 h-5 text-ford-red mt-0.5" />
           <div className="flex-1">
             <div className="text-sm font-bold">
-              Recomendação automática do Pulse AI
+              Recomendação automática do Vision AI
             </div>
             <p className="text-xs text-white/70 mt-1 leading-relaxed">
               Modelo prevê <b>15 trocas de pastilha de freio</b> em 30 dias na

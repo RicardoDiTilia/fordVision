@@ -30,7 +30,7 @@ export const leads: Lead[] = [
     region: "Sudeste",
     urgency: "high",
     script:
-      "Olá Carlos! Pelo padrão de uso da sua Ranger, suas pastilhas estão próximas do limite. Temos peça pronta hoje na Ford Pacaembu com 10% off pra clientes Pulse.",
+      "Olá Carlos! Pelo padrão de uso da sua Ranger, suas pastilhas estão próximas do limite. Temos peça pronta hoje na Ford Pacaembu com 10% off pra clientes Vision.",
     dealership: "Ford Pacaembu",
   },
   {
@@ -78,7 +78,7 @@ export const leads: Lead[] = [
     region: "Sudeste",
     urgency: "low",
     script:
-      "Julia, com a mudança de estação, oferecemos check-up cortesia pra clientes Pulse. Quer agendar?",
+      "Julia, com a mudança de estação, oferecemos check-up cortesia pra clientes Vision. Quer agendar?",
     dealership: "Ford Minas",
   },
   {

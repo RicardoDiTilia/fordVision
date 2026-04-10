@@ -72,7 +72,7 @@ export const client = {
     {
       id: "a3",
       title: "Check-up de inverno",
-      body: "Estação muda em 3 semanas. Check-up sazonal grátis para clientes Pulse.",
+      body: "Estação muda em 3 semanas. Check-up sazonal grátis para clientes Vision.",
       urgency: "low",
       dealership: "Ford Pacaembu",
       daysToService: 21,

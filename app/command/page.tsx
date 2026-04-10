@@ -13,12 +13,12 @@ import Performance from "@/components/command/Performance";
 import { Dealership } from "@/data/dealerships";
 import { getRole } from "@/lib/auth";
 
-const PulseMap = dynamic(() => import("@/components/command/PulseMap"), {
+const VisionMap = dynamic(() => import("@/components/command/VisionMap"), {
   ssr: false,
   loading: () => (
     <div className="h-full w-full flex items-center justify-center bg-black">
       <div className="text-ford-blue-light text-xs uppercase tracking-[0.3em] animate-pulse">
-        Carregando mapa Pulse...
+        Carregando mapa Vision...
       </div>
     </div>
   ),
@@ -27,7 +27,7 @@ const PulseMap = dynamic(() => import("@/components/command/PulseMap"), {
 type Section = "map" | "leads" | "stock" | "performance";
 
 const SECTIONS: { id: Section; label: string; icon: any }[] = [
-  { id: "map", label: "Mapa Pulse", icon: Map },
+  { id: "map", label: "Mapa Vision", icon: Map },
   { id: "leads", label: "Radar de Leads", icon: Radar },
   { id: "stock", label: "Estoque", icon: Package },
   { id: "performance", label: "Performance", icon: Trophy },
@@ -85,7 +85,7 @@ export default function CommandPage() {
       <main className="flex-1">
         {section === "map" && (
           <div className="relative h-[calc(100vh-104px)]">
-            <PulseMap selected={selected} onSelect={setSelected} />
+            <VisionMap selected={selected} onSelect={setSelected} />
             <div className="absolute top-4 left-4 bg-black/90 border border-ford-blue/60 p-3 z-[1000] font-mono-tech text-[10px] uppercase tracking-wider space-y-1.5 bracket">
               <div className="text-ford-blue-light mb-2">// SERVICE SHARE</div>
               <div className="flex items-center gap-2">

@@ -22,7 +22,7 @@ interface Props {
   onSelect: (d: Dealership) => void;
 }
 
-export default function PulseMap({ selected, onSelect }: Props) {
+export default function VisionMap({ selected, onSelect }: Props) {
   useEffect(() => {
     // Fix default icon issue
     delete (L.Icon.Default.prototype as any)._getIconUrl;

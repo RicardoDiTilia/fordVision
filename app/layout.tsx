@@ -3,7 +3,7 @@ import "./globals.css";
 import "leaflet/dist/leaflet.css";
 
 export const metadata: Metadata = {
-  title: "FORD PULSE — Retenção Inteligente",
+  title: "FORD VISION — Retenção Inteligente",
   description:
     "Do veículo ao serviço. Plataforma preditiva de retenção Ford.",
 };

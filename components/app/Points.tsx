@@ -11,7 +11,7 @@ export default function Points() {
     <div className="px-5 py-5 space-y-5">
       <div>
         <h1 className="font-display text-3xl font-bold tracking-[0.05em] uppercase">
-          Pontos <span className="text-ford-blue-light">Pulse</span>
+          Pontos <span className="text-ford-blue-light">Vision</span>
         </h1>
         <p className="text-[11px] text-white/50 mt-1">
           Cada serviço Ford = pontos pra você

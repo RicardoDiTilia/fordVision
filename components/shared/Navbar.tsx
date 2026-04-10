@@ -48,7 +48,7 @@ export default function Navbar() {
             <span className="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 rounded-full bg-ford-blue-light rec-dot" />
           </div>
           <span className="font-display font-bold tracking-[0.32em] text-white text-sm">
-            FORD<span className="text-ford-blue-light">·</span>PULSE
+            FORD<span className="text-ford-blue-light">·</span>VISION
           </span>
           <span className="hidden md:inline font-mono-tech text-[9px] text-white/40 ml-2 border-l border-white/20 pl-3">
             v2.6.0

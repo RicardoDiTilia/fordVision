@@ -1,4 +1,4 @@
-# Ford Pulse
+# Ford Vision
 
 Protótipo de estudo de uma plataforma de retenção inteligente para concessionárias Ford. Conecta dados do veículo (telemetria) a um motor de IA preditivo que entrega leads prontos para a equipe de contato no momento certo.
 
@@ -17,10 +17,10 @@ Protótipo de estudo de uma plataforma de retenção inteligente para concession
 
 | Rota        | Descrição |
 |-------------|-----------|
-| `/`         | Login HUD com animação PULSE / ECG. Credenciais de demo abaixo. |
+| `/`         | Login HUD com animação VISION / ECG. Credenciais de demo abaixo. |
 | `/app`      | App do cliente final (mockado em `PhoneShell`): Meu Ford, Alertas, Pontos, Histórico, Momentos-chave. |
-| `/command`  | Command Center para a equipe Ford: Mapa Pulse (Brasil), Radar de Leads, Estoque integrado, Performance / Ranking. |
-| `/motor`    | Diagrama da arquitetura do Motor de IA Ford Pulse. |
+| `/command`  | Command Center para a equipe Ford: Mapa Vision (Brasil), Radar de Leads, Estoque integrado, Performance / Ranking. |
+| `/motor`    | Diagrama da arquitetura do Motor de IA Ford Vision. |
 
 ## Credenciais de demo
 
@@ -59,7 +59,7 @@ app/
   globals.css        # tema HUD + helpers tailwind
 components/
   app/               # telas do app cliente (MyFord, Alerts, Points, ...)
-  command/           # telas do command center (PulseMap, DealerPanel, ...)
+  command/           # telas do command center (VisionMap, DealerPanel, ...)
   shared/            # Navbar, FordLogo
 data/                # mocks (cliente, concessionárias, leads)
 lib/auth.ts          # auth fake (localStorage)
@@ -77,4 +77,4 @@ Tipografia: *Chakra Petch* (display), *Archivo* (sans), *JetBrains Mono* (mono t
 
 ## Disclaimer
 
-Este repositório é um trabalho de estudo. Os dados, clientes, concessionárias e métricas exibidos são fictícios. Ford, Ford Pulse e o logotipo da Ford são marcas registradas da Ford Motor Company e não há qualquer afiliação oficial com este projeto.
+Este repositório é um trabalho de estudo. Os dados, clientes, concessionárias e métricas exibidos são fictícios. Ford, Ford Vision e o logotipo da Ford são marcas registradas da Ford Motor Company e não há qualquer afiliação oficial com este projeto.

@@ -2,7 +2,7 @@
 
 export type Role = "cliente" | "gerente";
 
-const KEY = "ford-pulse-auth";
+const KEY = "ford-vision-auth";
 
 export function login(user: string, pass: string): Role | null {
   if (user === "cliente" && pass === "cliente") {

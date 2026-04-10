@@ -54,7 +54,7 @@ export default function LoginPage() {
 
       {/* HUD top label */}
       <div className="absolute top-8 left-1/2 -translate-x-1/2 label-tech text-center">
-        SECURE TERMINAL · v2.6 · NODE 0xPULSE
+        SECURE TERMINAL · v2.6 · NODE 0xVISION
       </div>
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 label-tech text-center">
         FORD MOTOR COMPANY · AUTHORIZED ACCESS ONLY
@@ -104,7 +104,7 @@ export default function LoginPage() {
       {/* Vignette */}
       <div className="absolute inset-0 vignette" />
 
-      {/* Logo + PULSE */}
+      {/* Logo + VISION */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -117,9 +117,9 @@ export default function LoginPage() {
           initial={{ opacity: 0, letterSpacing: "0.05em" }}
           animate={{ opacity: 1, letterSpacing: "0.25em" }}
           transition={{ delay: 1.2, duration: 1 }}
-          className="pulse-text mt-4 text-[80px] md:text-[100px] leading-none"
+          className="vision-text mt-4 text-[80px] md:text-[100px] leading-none"
         >
-          PULSE
+          VISION
         </motion.h1>
 
         {/* ECG line */}
