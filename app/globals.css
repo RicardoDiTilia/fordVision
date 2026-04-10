@@ -342,3 +342,76 @@ body {
   background: #0068d6;
   color: #fff;
 }
+
+/* === CRT SCANLINE OVERLAY === */
+.scanline::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+  mix-blend-mode: multiply;
+}
+
+/* === GLITCH EFFECT === */
+@keyframes glitch {
+  0% { transform: translate(0); filter: none; }
+  20% { transform: translate(-2px, 1px); filter: hue-rotate(90deg); }
+  40% { transform: translate(2px, -1px); filter: hue-rotate(-90deg); }
+  60% { transform: translate(-1px, -1px); filter: saturate(5); }
+  80% { transform: translate(1px, 2px); filter: hue-rotate(180deg); }
+  100% { transform: translate(0); filter: none; }
+}
+.glitch-in {
+  animation: glitch 0.3s ease-in-out;
+}
+
+/* === TYPING CURSOR === */
+@keyframes blink-cursor {
+  0%, 100% { border-color: #0068d6; }
+  50% { border-color: transparent; }
+}
+.typing-cursor {
+  border-right: 2px solid #0068d6;
+  animation: blink-cursor 0.8s step-end infinite;
+}
+
+/* === BOOT SEQUENCE === */
+@keyframes bootFade {
+  0% { opacity: 0; transform: translateY(4px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.boot-line {
+  opacity: 0;
+  animation: bootFade 0.3s ease-out forwards;
+}
+
+@keyframes progressFill {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+/* === COUNTER FLASH === */
+@keyframes counterFlash {
+  0% { color: #0068d6; text-shadow: 0 0 12px rgba(0, 104, 214, 0.8); }
+  100% { color: inherit; text-shadow: none; }
+}
+.counter-flash {
+  animation: counterFlash 0.6s ease-out;
+}
+
+/* === LIVE DOT === */
+@keyframes livePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 200, 83, 0.7); }
+  50% { box-shadow: 0 0 0 6px rgba(0, 200, 83, 0); }
+}
+.live-dot {
+  animation: livePulse 2s ease-in-out infinite;
+}
