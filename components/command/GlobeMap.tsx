@@ -24,6 +24,17 @@ const LABEL_OFFSETS: Record<string, { x: number; y: number; align: "left" | "rig
   "ford-brasilia":     { x: -85, y: -20,  align: "right" },
   "ford-pantanal":     { x: -80, y: 14,   align: "right" },
   "ford-sulamericana": { x: -75, y: 16,   align: "right" },
+  "ford-tropical":     { x: -85, y: -15,  align: "right" },
+  "ford-sertao":       { x: 85,  y: -10,  align: "left" },
+  "ford-marajo":       { x: 85,  y: 15,   align: "left" },
+  "ford-buenos-aires": { x: 85,  y: 10,   align: "left" },
+  "ford-cordoba":      { x: -85, y: -10,  align: "right" },
+  "ford-santiago":     { x: -85, y: 15,   align: "right" },
+  "ford-bogota":       { x: 85,  y: -15,  align: "left" },
+  "ford-lima":         { x: -85, y: 10,   align: "right" },
+  "ford-quito":        { x: -85, y: 15,   align: "right" },
+  "ford-asuncion":     { x: -85, y: -10,  align: "right" },
+  "ford-montevideo":   { x: 85,  y: -15,  align: "left" },
 };
 
 interface Props {

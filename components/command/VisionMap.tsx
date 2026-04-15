@@ -11,10 +11,10 @@ const COLORS: Record<Dealership["level"], string> = {
   low: "#C41E3A",
 };
 
-// Brazil bounding box (SW, NE)
-const BRAZIL_BOUNDS: L.LatLngBoundsExpression = [
-  [-35, -74],
-  [6, -32],
+// LATAM bounding box (SW, NE)
+const LATAM_BOUNDS: L.LatLngBoundsExpression = [
+  [-56, -120],
+  [33, -30],
 ];
 
 interface Props {
@@ -32,9 +32,9 @@ export default function VisionMap({ selected, onSelect }: Props) {
     <MapContainer
       center={[-14.5, -51]}
       zoom={4}
-      minZoom={4}
+      minZoom={3}
       maxZoom={8}
-      maxBounds={BRAZIL_BOUNDS}
+      maxBounds={LATAM_BOUNDS}
       maxBoundsViscosity={1.0}
       style={{ height: "100%", width: "100%" }}
       scrollWheelZoom
@@ -44,8 +44,6 @@ export default function VisionMap({ selected, onSelect }: Props) {
       <TileLayer
         attribution='&copy; OpenStreetMap'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        noWrap
-        bounds={BRAZIL_BOUNDS}
       />
       {dealerships.map((d) => {
         const isSel = selected?.id === d.id;

@@ -3,11 +3,9 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Car, Bell, Award, Clock, Sparkles } from "lucide-react";
+import { Car, Bell, Award, Clock, Sparkles, Wifi, Signal, BatteryFull } from "lucide-react";
 import Navbar from "@/components/shared/Navbar";
 import GradientCanvas from "@/components/shared/GradientCanvas";
-import ScrollIndicator from "@/components/shared/ScrollIndicator";
-import PhoneShell from "@/components/app/PhoneShell";
 import Onboarding from "@/components/app/Onboarding";
 import MyFord from "@/components/app/MyFord";
 import Alerts from "@/components/app/Alerts";
@@ -54,28 +52,43 @@ export default function ClientAppPage() {
       <Navbar />
       <main className="flex-1 flex items-center justify-center py-8 px-4 relative z-10">
         <div className="flex flex-col items-center gap-4">
-          <PhoneShell>
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={tab}
-                variants={tabVariants}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-              >
-                {tab === "onboarding" && (
-                  <Onboarding onFinish={() => setTab("myford")} />
-                )}
-                {tab === "myford" && <MyFord />}
-                {tab === "alerts" && <Alerts />}
-                {tab === "points" && <Points />}
-                {tab === "timeline" && <Timeline />}
-                {tab === "moments" && <KeyMoments />}
-              </motion.div>
-            </AnimatePresence>
+          <div className="phone-frame w-[400px] h-[820px] flex flex-col">
+            {/* Status bar */}
+            <div className="flex items-center justify-between px-6 pt-3 pb-1 text-[11px] text-white/80">
+              <span className="font-semibold">9:41</span>
+              <div className="flex items-center gap-1">
+                <Signal className="w-3 h-3" />
+                <Wifi className="w-3 h-3" />
+                <BatteryFull className="w-4 h-4" />
+              </div>
+            </div>
 
+            {/* Scrollable content */}
+            <div className="flex-1 overflow-y-auto min-h-0">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={tab}
+                  variants={tabVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  className="h-full"
+                >
+                  {tab === "onboarding" && (
+                    <Onboarding onFinish={() => setTab("myford")} />
+                  )}
+                  {tab === "myford" && <MyFord />}
+                  {tab === "alerts" && <Alerts />}
+                  {tab === "points" && <Points />}
+                  {tab === "timeline" && <Timeline />}
+                  {tab === "moments" && <KeyMoments />}
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            {/* Fixed bottom navbar */}
             {tab !== "onboarding" && (
-              <div className="border-t border-ford-gray-mid bg-black/95 backdrop-blur sticky bottom-0">
+              <div className="border-t border-ford-gray-mid bg-black/95 backdrop-blur shrink-0">
                 <div className="grid grid-cols-5 px-2 py-2">
                   {TABS.map((t) => {
                     const Icon = t.icon;
@@ -98,7 +111,7 @@ export default function ClientAppPage() {
                 </div>
               </div>
             )}
-          </PhoneShell>
+          </div>
 
           {tab === "onboarding" && (
             <button
@@ -110,8 +123,6 @@ export default function ClientAppPage() {
           )}
         </div>
       </main>
-      {/* G — Scroll indicator */}
-      <ScrollIndicator />
     </div>
   );
 }

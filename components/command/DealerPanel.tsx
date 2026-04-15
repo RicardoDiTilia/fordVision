@@ -120,7 +120,7 @@ export default function DealerPanel({ dealer, onClose }: Props) {
         {/* Stock */}
         <div>
           <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.25em] text-white/50 mb-2">
-            <Package className="w-3 h-3" /> Estoque crítico
+            <Package className="w-3 h-3" /> Estoque da filial
           </div>
           <div className="space-y-2">
             {dealer.criticalStock.map((s) => (

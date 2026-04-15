@@ -30,8 +30,29 @@ export interface KeyMoment {
   active: boolean;
 }
 
+export interface Vehicle {
+  model: string;
+  plate: string;
+  km: number;
+  color: string;
+}
+
 export const client = {
   name: "Rafael Mendes",
+  vehicles: [
+    {
+      model: "Ford Ranger 2024 Limited",
+      plate: "ABC-1D23",
+      km: 18420,
+      color: "Cinza Magnetic",
+    },
+    {
+      model: "Ford Ranger Raptor 2026",
+      plate: "XYZ-9E87",
+      km: 3150,
+      color: "Preto Absoluto",
+    },
+  ] as Vehicle[],
   vehicle: {
     model: "Ford Ranger 2024 Limited",
     plate: "ABC-1D23",

@@ -48,17 +48,14 @@ function NeonUnderGlow() {
 
   return (
     <group ref={ref}>
-      {/* Main glow ring */}
       <mesh position={[0, 0.01, 0]} rotation={[-Math.PI / 2, 0, 0]}>
         <ringGeometry args={[0.8, 2.4, 64]} />
         <meshBasicMaterial color="#0068D6" transparent opacity={0.1} side={THREE.DoubleSide} />
       </mesh>
-      {/* Inner bright ring */}
       <mesh position={[0, 0.01, 0]} rotation={[-Math.PI / 2, 0, 0]}>
         <ringGeometry args={[1.0, 1.3, 64]} />
         <meshBasicMaterial color="#3DA0FF" transparent opacity={0.06} side={THREE.DoubleSide} />
       </mesh>
-      {/* Outer soft ring */}
       <mesh position={[0, 0.01, 0]} rotation={[-Math.PI / 2, 0, 0]}>
         <ringGeometry args={[2.2, 3.2, 64]} />
         <meshBasicMaterial color="#003478" transparent opacity={0.04} side={THREE.DoubleSide} />
@@ -100,13 +97,11 @@ export default function CarViewer3D() {
         <ambientLight intensity={1.2} />
         <hemisphereLight args={["#ffffff", "#0a1a3a", 0.8]} />
 
-        {/* Key + fills */}
         <directionalLight position={[3, 4, 5]} intensity={2} />
         <directionalLight position={[-4, 3, 2]} intensity={1.2} />
         <directionalLight position={[0, 2, -4]} intensity={0.8} />
         <directionalLight position={[0, 6, 0]} intensity={1} />
 
-        {/* Blue rim — very subtle hint */}
         <pointLight position={[-4, 0.8, 0]} intensity={0.35} color="#0068D6" distance={10} />
         <pointLight position={[4, 0.8, 0]} intensity={0.25} color="#0068D6" distance={10} />
 
